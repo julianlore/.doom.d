@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: graphicsratio
+# key: grr
+# --
+\includegraphics[scale=${1:scale}]{${2:image}}

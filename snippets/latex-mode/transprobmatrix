@@ -1,0 +1,13 @@
+# -*- mode: snippet -*-
+# name: transprobmatrix
+# key: tpm
+# --
+\begin{blockarray}{${1:cccc}}
+& 1 & 2 & 3 \\\\
+\begin{block}{$1}
+1
+\\\\ 2
+\\\\ 3
+\\\\
+\end{block}
+\end{blockarray}
