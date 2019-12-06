@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: rchunk
+# key: rch
+# --
+\`\`\`{r}
+$1
+\`\`\`
