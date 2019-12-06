@@ -7,6 +7,10 @@
   :init (evil-mode 1)
   :config (setq evil-want-fine-undo t))
 
+;; Rmarkdown
+(use-package! polymode
+  :mode ("\\.Rmd" . poly-markdown+r-mode))
+
 (after! undo-tree
   (global-undo-tree-mode)
   (setq undo-tree-auto-save-history t))
@@ -37,3 +41,5 @@
 (add-hook 'text-mode-hook 'auto-fill-mode)
 ;; Set yes-or-no to always be y-or-n
 (fset 'yes-or-no-p 'y-or-n-p)
+
+(setq doc-view-continuous t)
