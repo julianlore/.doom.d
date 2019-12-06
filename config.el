@@ -34,6 +34,8 @@
 (setq tab-stop-list (number-sequence 4 200 4))
 (setq tab-width 4)
 
+(+global-word-wrap-mode 1)
+
 (when (fboundp 'windmove-default-keybindings)
   (windmove-default-keybindings 'meta))
 
