@@ -9,7 +9,9 @@
 
 (use-package! cdlatex
   :hook (LaTeX-mode . turn-on-cdlatex)
-  (latex-mode . turn-on-cdlatex))
+  (latex-mode . turn-on-cdlatex)
+  ;; Fix cdlatex not closing parentheses
+  :bind* ((("(" . self-insert-command))))
 
 ;; Rmarkdown
 (use-package! polymode
