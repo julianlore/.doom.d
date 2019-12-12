@@ -7,6 +7,10 @@
   :init (evil-mode 1)
   :config (setq evil-want-fine-undo t))
 
+(use-package! cdlatex
+  :hook (LaTeX-mode . turn-on-cdlatex)
+  (latex-mode . turn-on-cdlatex))
+
 ;; Rmarkdown
 (use-package! polymode
   :mode ("\\.Rmd" . poly-markdown+r-mode))

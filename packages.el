@@ -11,3 +11,4 @@
 (package! polymode)
 (package! markdown-mode)
 (package! poly-R)
+(package! cdlatex)
