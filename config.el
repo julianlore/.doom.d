@@ -10,8 +10,9 @@
 (use-package! cdlatex
   :hook (LaTeX-mode . turn-on-cdlatex)
   (latex-mode . turn-on-cdlatex)
-  ;; Fix cdlatex not closing parentheses
-  :bind* ((("(" . self-insert-command))))
+  ;; Replace some cdlatex binds
+  :bind* (:map LaTeX-mode ("(" . LaTeX-insert-left-brace))
+  :bind* (:map LaTeX-mode ("$" . TeX-insert-dollar)))
 
 ;; Rmarkdown
 (use-package! polymode
