@@ -10,13 +10,22 @@
 (use-package! cdlatex
   :hook (LaTeX-mode . turn-on-cdlatex)
   (latex-mode . turn-on-cdlatex)
-  ;; Replace some cdlatex binds
-  :bind* (:map LaTeX-mode ("(" . LaTeX-insert-left-brace))
-  :bind* (:map LaTeX-mode ("$" . TeX-insert-dollar)))
+  ;; Disable some cdlatex binds
+  :config (define-key cdlatex-mode-map "(" nil)
+  (define-key cdlatex-mode-map "{" nil)
+  (define-key cdlatex-mode-map "[" nil)
+  (define-key cdlatex-mode-map "|" nil)
+  (define-key cdlatex-mode-map "<" nil)
+  (define-key cdlatex-mode-map "$" nil)
+  )
 
 ;; Rmarkdown
 (use-package! polymode
   :mode ("\\.Rmd" . poly-markdown+r-mode))
+
+(after! latex
+  ;; Don't ask to save before compiling
+  (setq TeX-save-query nil))
 
 (after! undo-tree
   (global-undo-tree-mode)
