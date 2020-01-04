@@ -2,6 +2,10 @@
 
 ;; Place your private configuration here
 
+;; Font
+(setq doom-font     (font-spec :family "Source Code Pro" :size 14)
+      doom-big-font (font-spec :family "Source Code Pro" :size 19))
+
 ;; Extremely basic evil config instead of enabling evil module
 (use-package! evil
   :init (evil-mode 1)
