@@ -45,6 +45,9 @@
 (use-package! flyspell-popup
   :hook (flyspell-mode . flyspell-popup-auto-correct-mode))
 
+(use-package! ahk-mode
+  :mode ("\\.ahk" . ahk-mode))
+
 (global-set-key (kbd "C-c C-/") (quote comment-line))
 (global-set-key (kbd "C-c C-SPC") (quote comment-line))
 (setq-default c-basic-offset 4 c-default-style "linux")

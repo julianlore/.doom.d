@@ -12,3 +12,4 @@
 (package! markdown-mode)
 (package! poly-R)
 (package! cdlatex)
+(package! ahk-mode)
